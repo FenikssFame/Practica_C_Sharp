@@ -4,8 +4,7 @@
     {
         public static void Main(string[] args)
         {
-            Random rnd = new Random();
-            string num = Convert.ToString(rnd.Next(1000,10000));
+            string num = "8745";
 
             Console.WriteLine($"Исходное число = {num}\n" +
                 $"После перестановки = {num[0]}{num[2]}{num[1]}{num[3]}");

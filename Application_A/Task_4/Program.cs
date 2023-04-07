@@ -19,7 +19,7 @@
 
             double result = widthRoom * heightRoom * 4 - widthDoor * heightDoor - widthWindow * heightWindow;
 
-            Console.WriteLine($"Площадь для обклеивания составляет: {result}") ;
+            Console.WriteLine($"Площадь для обклеивания составляет: {result}");
         }
     }
 }
