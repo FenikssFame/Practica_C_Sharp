@@ -103,10 +103,6 @@
     class RailwayStation
     {
         private List<Train> trains = new List<Train>();
-        public RailwayStation()
-        {
-            List<Train> trains = new List<Train>();
-        }
         public Train this[int index]    //пользовательский индексатор для класса
         {
             get
