@@ -26,7 +26,7 @@
                 }
                 else throw new Exception("Ошибка выхода из диапазона допустимых значений x");
             }
-            catch (FormatException)
+            catch (FormatException) // выводить через переменную ex (ex.Message) Замечание
             {
                 Console.WriteLine("Попытка передать в метод аргумент неверного формата");
             }
