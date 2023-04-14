@@ -31,7 +31,6 @@
             {
                 return true;
             }
-
             return false;
         }
         public static double[,] GetCreateMatrix(int row, int colum)
