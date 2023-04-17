@@ -18,7 +18,7 @@
             string text = "";
             foreach (string word in words)
             {
-                if (word.LastIndexOfAny(new char[] { '1', '2' , '3', '4', '5' , '6', '7', '8', '9', '0' }) > -1)
+                if (word.LastIndexOfAny(new char[] { '1', '2', '3', '4', '5', '6', '7', '8', '9', '0' }) > -1)
                 {
                     text += " " + word;
                 }
