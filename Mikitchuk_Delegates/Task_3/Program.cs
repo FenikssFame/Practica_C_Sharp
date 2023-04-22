@@ -1,6 +1,4 @@
-﻿using System.Diagnostics;
-
-namespace Task_3
+﻿namespace Task_3
 {
     public delegate void StringOperation(string[] str);
     class Program
