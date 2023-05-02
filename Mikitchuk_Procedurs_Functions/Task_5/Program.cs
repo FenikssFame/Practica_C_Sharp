@@ -1,7 +1,16 @@
 ﻿namespace Task_5
 {
+    /// <summary>
+    /// Главный класс.
+    /// Реализует методы вывода и ввода данных на консоль.
+    /// </summary>
     class Task_5
     {
+        /// <summary>
+        /// Вводит информацию о поездах.
+        /// Выводит информацию о поезде.
+        /// </summary>
+        /// <param name="args">Можно передать массив со строками</param>
         public static void Main(string[] args)
         {
             RailwayStation rs = new RailwayStation();
@@ -35,6 +44,10 @@
                 }
             }
         }
+        /// <summary>
+        /// Метод вывода информации о поезде по его номеру.
+        /// </summary>
+        /// <param name="rs">Парпметр является ссылкой на класс RailwayStation.</param>
         public static void ShowInfoTrainNum(RailwayStation rs)
         {
             int num = 0;
@@ -54,6 +67,10 @@
             }
             Console.WriteLine(rs[num].ToString());
         }
+        /// <summary>
+        /// Метод вывода поездов которые отправляются после времени введенного пользователем.
+        /// </summary>
+        /// <param name="rs">Парпметр является ссылкой на класс RailwayStation.</param>
         public static void ShowLastTimeInfoTrain(RailwayStation rs)
         {
             List<string> train; ;
@@ -63,6 +80,10 @@
                 Console.WriteLine(tr);
             }
         }
+        /// <summary>
+        /// Метод вывода поездов прибывающих в введеный пользователем пункт назвначения.
+        /// </summary>
+        /// <param name="rs">Парпметр является ссылкой на класс RailwayStation.</param>
         public static void ShowFinishPunkt(RailwayStation rs)
         {
             Console.Write("Введите пункт назначения: ");
@@ -73,6 +94,10 @@
                 Console.WriteLine(tr.ToString());
             }
         }
+        /// <summary>
+        /// Метод добавления поезда.
+        /// </summary>
+        /// <param name="rs">Парпметр является ссылкой на класс RailwayStation.</param>
         public static void AddTrain(RailwayStation rs)
         {
             for (int i = 0; i < 3; i++)
@@ -99,11 +124,21 @@
             }
         }
     }
-
+    /// <summary>
+    /// Класс реализующий вокзал.
+    /// </summary>
     class RailwayStation
     {
+        /// <summary>
+        /// Инициализация списка поездов.
+        /// </summary>
         private List<Train> trains = new List<Train>();
-        public Train this[int index]    //пользовательский индексатор для класса
+        /// <summary>
+        /// Возвращает поезд по его индексу.
+        /// </summary>
+        /// <param name="index">Параметр индекса поезда.</param>
+        /// <returns>Возвращает поезд</returns>
+        public Train this[int index]
         {
             get
             {
@@ -118,13 +153,22 @@
                 }
             }
         }
-        public void Add(string finishPunct, int num)       //метод добавления поезда в коллекцию
+        /// <summary>
+        /// Метод добавления поезда.
+        /// </summary>
+        /// <param name="finishPunct">Параметр конечного пункта назначения поезда.</param>
+        /// <param name="num">Параметр номера поезда.</param>
+        public void Add(string finishPunct, int num)
         {
 
             Train train = new Train(finishPunct, num);
             trains.Add(train);
             trains.Sort();
         }
+        /// <summary>
+        /// Метод нахождения поезда отправляющегося после введенного времени.
+        /// </summary>
+        /// <param name="train">Список поездов.</param>
         public void LastTimeInfoTrain(out List<string> train)
         {
             train = new List<string>();
@@ -137,7 +181,12 @@
                 }
             }
         }
-        public List<Train> ShowFinishPunct(string punkt) //метод для вывода ин-ии о поездах, отправляющихся в заданный пункт назначения
+        /// <summary>
+        /// Метод для вывода ин-ии о поездах, отправляющихся в заданный пункт назначения.
+        /// </summary>
+        /// <param name="punkt">Параметр конечного пункта назначения поезда.</param>
+        /// <returns></returns>
+        public List<Train> ShowFinishPunct(string punkt)
         {
             List<Train> list = new List<Train>();
             for (int i = 0; i < trains.Count; i++)
@@ -149,32 +198,54 @@
             }
             return list;
         }
-
     }
-
+    /// <summary>
+    /// Класс инициализации поезда.
+    /// </summary>
     class Train : IComparable
     {
-
+        /// <summary>
+        /// Конструктор инициализации поезда с параметрами.
+        /// </summary>
+        /// <param name="finishPunct">Параметр конечного пункта назначения.</param>
+        /// <param name="namber">Параметр номера поезда.</param>
         public Train(string finishPunct, int namber)
         {
             this.finishPunct = finishPunct;
             this.namber = namber;
             SetTime();
         }
+        /// <summary>
+        /// Конструктор инициализации поезда с параметрами.
+        /// </summary>
+        /// <param name="finishPunct">Параметр конечного пункта назначения.</param>
+        /// <param name="namber">Параметр номера поезда.</param>
+        /// <param name="time">Параметр времени отправки поезда.</param>
         public Train(string finishPunct, int namber, DateTime time)
         {
             this.finishPunct = finishPunct;
             this.namber = namber;
             this.time = time;
         }
+        /// <summary>
+        /// Переменная конечного пункта назначения.
+        /// </summary>
         String finishPunct;
+        /// <summary>
+        /// Свойство присвоения переменной конечного пункта назначения.
+        /// </summary>
         public String FinishPunct
         {
             get { return finishPunct; }
             set { finishPunct = value; }
         }
-
+        /// <summary>
+        /// Переменная номера поезда.
+        /// </summary>
         int namber;
+        /// <summary>
+        /// Свойство присвоения переменной номера поезда.
+        /// </summary>
         public int Namber
         {
             get { return namber; }
@@ -184,14 +255,21 @@
                     namber = value;
             }
         }
-
+        /// <summary>
+        /// Переменная времени отправки поезда.
+        /// </summary>
         DateTime time;
+        /// <summary>
+        /// Свойство присвоения переменной времени отправки поезда.
+        /// </summary>
         public DateTime Time
         {
             get { return time; }
             set { time = value; }
         }
-
+        /// <summary>
+        /// Метод отбора поездов по введенному времени.
+        /// </summary>
         void SetTime()
         {
             while (true)
@@ -240,6 +318,11 @@
 
             }
         }
+        /// <summary>
+        /// Метод сортировки.
+        /// </summary>
+        /// <param name="input">Параметр принимающий параметр для сортировки.</param>
+        /// <returns></returns>
         public int CompareTo(object input)
         {
             if (input is Train)
@@ -254,29 +337,57 @@
             }
             return 0;
         }
+        /// <summary>
+        /// Переопределенный метод ToString.
+        /// </summary>
+        /// <returns>Возвращает информацию о поезде.</returns>
         public string ToString()
         {
             string info = $"Поезд №{namber} следует в пункт назначения {finishPunct}. Время отправления: {time.Hour}.{time.Minute}!";
             return info;
         }
+        /// <summary>
+        /// Переопределенный метод сравнения.
+        /// </summary>
+        /// <param name="p1">Параметр для сравнения.</param>
+        /// <param name="p2">Параметр для сравнения.</param>
+        /// <returns>Возвращает true или false</returns>
         public static bool operator >(Train p1, Train p2)
         {
             if (p1.Time > p2.Time)
                 return true;
             return false;
         }
+        /// <summary>
+        /// Переопределенный метод сравнения.
+        /// </summary>
+        /// <param name="p1">Параметр для сравнения.</param>
+        /// <param name="p2">Параметр для сравнения.</param>
+        /// <returns>Возвращает true или false</returns>
         public static bool operator <(Train p1, Train p2)
         {
             if (p1.Time < p2.Time)
                 return true;
             return false;
         }
+        /// <summary>
+        /// Переопределенный метод сравнения.
+        /// </summary>
+        /// <param name="p1">Параметр для сравнения.</param>
+        /// <param name="p2">Параметр для сравнения.</param>
+        /// <returns>Возвращает true или false</returns>
         public static bool operator ==(Train p1, Train p2)
         {
             if (p1.Time == p2.Time)
                 return true;
             return false;
         }
+        /// <summary>
+        /// Переопределенный метод сравнения.
+        /// </summary>
+        /// <param name="p1">Параметр для сравнения.</param>
+        /// <param name="p2">Параметр для сравнения.</param>
+        /// <returns>Возвращает true или false</returns>
         public static bool operator !=(Train p1, Train p2)
         {
             if (p1.Time != p2.Time)

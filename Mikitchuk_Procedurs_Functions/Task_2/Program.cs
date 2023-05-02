@@ -1,7 +1,18 @@
 ﻿namespace Task_2
 {
+    /// <summary>
+    /// Главный класс.
+    /// Выполнение метода Main.
+    /// </summary>
     class Task_2
     {
+        /// <summary>
+        /// Главный метод.
+        /// Вводятся значения.
+        /// Создается ссылка на класс Program.
+        /// Выполняется цикл вывода значений результата функции.
+        /// </summary>
+        /// <param name="args">Можно передать массив со строками</param>
         public static void Main(string[] args)
         {
             Console.Write("Введите начальное значение: ");
@@ -17,8 +28,18 @@
             }
         }
     }
+    /// <summary>
+    /// Класс высчитывания функции
+    /// </summary>
     class Program
     {
+        /// <summary>
+        /// Функция вычисления значений на отрезке с завданым шагом.
+        /// </summary>
+        /// <param name="start">Начальное значение отрезка</param>
+        /// <param name="finish">Конечное значение отрезка</param>
+        /// <param name="h">Шаг передвижения по отрезку</param>
+        /// <returns>Возвращает List типа double.</returns>
         public List<double> F(double start, double finish, double h)
         {
             List<double> list = new List<double>();

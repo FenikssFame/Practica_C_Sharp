@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-
 namespace Task_4
 {
     class Program
