@@ -1,10 +1,15 @@
 using System.Text.RegularExpressions;
+using System.Threading;
+using System.Globalization;
+using System.Resources;
+
 namespace Task_4
 {
     public partial class Form1 : Form
     {
         public Form1()
         {
+            Thread.CurrentThread.CurrentUICulture = Thread.CurrentThread.CurrentCulture;
             InitializeComponent();
         }
         public string LastName { get => textBox1.Text; set => LastName = value; }
@@ -209,6 +214,11 @@ namespace Task_4
                 if (textBox5.Text == string.Empty) { lineFour += "- Адрес эл. почты\r\n"; }
                 MessageBox.Show(lineFour, "Не заполнены поля!", MessageBoxButtons.OK);
             }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, helpProvider1.HelpNamespace);
         }
     }
 }

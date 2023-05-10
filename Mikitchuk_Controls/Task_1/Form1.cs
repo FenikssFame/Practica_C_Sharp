@@ -11,6 +11,7 @@ namespace Task_1
         {
             char[] alf = "qwertyuiopasdfghjklzxcvbnm".ToCharArray();
             string text = textBox1.Text;
+
             text.ToLower();
             string newText = "";
             for (int i = 0; i < text.Length; i++)

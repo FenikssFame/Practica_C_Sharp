@@ -1,4 +1,4 @@
-﻿namespace Task_3
+﻿namespace Task_4
 {
     partial class Form1
     {
@@ -28,22 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.userControl11 = new WFControlLibrarytable.UserControl1();
             this.SuspendLayout();
+            // 
+            // userControl11
+            // 
+            this.userControl11.Location = new System.Drawing.Point(12, 12);
+            this.userControl11.Name = "userControl11";
+            this.userControl11.Size = new System.Drawing.Size(183, 206);
+            this.userControl11.TabIndex = 0;
+            this.userControl11.TimeEnabled = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 861);
+            this.ClientSize = new System.Drawing.Size(337, 288);
+            this.Controls.Add(this.userControl11);
             this.Name = "Form1";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Form1";
-            this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form1_Paint);
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private WFControlLibrarytable.UserControl1 userControl11;
     }
 }
 
