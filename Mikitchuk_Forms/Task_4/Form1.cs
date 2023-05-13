@@ -220,5 +220,10 @@ namespace Task_4
         {
             Help.ShowHelp(this, helpProvider1.HelpNamespace);
         }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
     }
 }

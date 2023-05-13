@@ -717,6 +717,7 @@
             menuStrip1.Name = "menuStrip1";
             helpProvider1.SetShowHelp(menuStrip1, (bool)resources.GetObject("menuStrip1.ShowHelp"));
             toolTip1.SetToolTip(menuStrip1, resources.GetString("menuStrip1.ToolTip"));
+            menuStrip1.ItemClicked += menuStrip1_ItemClicked;
             // 
             // перваяКнопкаToolStripMenuItem
             // 
