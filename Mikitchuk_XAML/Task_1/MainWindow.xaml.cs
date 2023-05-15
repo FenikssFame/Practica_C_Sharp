@@ -7,6 +7,7 @@ using Task_1.Share;
 using System.Collections.Generic;
 using Task_1.Models;
 using Microsoft.Extensions.Logging;
+using System.Windows.Controls;
 
 namespace Task_1
 {
@@ -37,7 +38,9 @@ namespace Task_1
         private void buttonAdd_Click(object sender, RoutedEventArgs e)
         {
 
-            //T0D0: Robasute dopmy AddCountry
+            AddNewBook addNewBook = new AddNewBook();
+            addNewBook.XmlFilePath = _xmlFilePath;
+            addNewBook.Show();
             PrintBooks(_worker.GetAll());
         }
         private void buttonExit_Click(object sender, RoutedEventArgs e)
@@ -65,7 +68,7 @@ namespace Task_1
                 textBlockXmlFileContent.Text += book.ToString();
             }
         }
-        private void textBoxBookName_TextChanged(object sender, System.Windows.Controls.TextBox e)
+        private void textBoxBookName_TextChanged(object sender, TextChangedEventArgs e)
         {
             if (string.IsNullOrEmpty(textBoxBookName.Text))
             {
@@ -75,7 +78,6 @@ namespace Task_1
         private void buttonOpenFile_Click(object sender, RoutedEventArgs e)
         {
             var dialog = new OpenFileDialog();
-            //TODO: 310 moxwo nepegenare :)
             dialog.InitialDirectory = Directory.GetParent(AppContext.BaseDirectory)
             .Parent
             .Parent

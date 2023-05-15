@@ -21,15 +21,15 @@ namespace Task_1.Share
         public void Add(Book book)
         {
             var xRoot = _document.DocumentElement;
-            XmlElement bookElem = _document.CreateElement("book");
-            XmlAttribute nameAttribute = _document.CreateAttribute("name");
+            XmlElement bookElem = _document.CreateElement("Book");
+            XmlAttribute nameAttribute = _document.CreateAttribute("Name");
             XmlText nameText = _document.CreateTextNode(book.Name);
             nameAttribute.AppendChild(nameText);
-            XmlElement authorElem = _document.CreateElement("author");
+            XmlElement authorElem = _document.CreateElement("Author");
             XmlText authorInnerText = _document.CreateTextNode(book.Author);
             authorElem.AppendChild(authorInnerText);
             bookElem.AppendChild(authorElem);
-            XmlElement yersElem = _document.CreateElement("yers");
+            XmlElement yersElem = _document.CreateElement("Year");
             XmlText yersInnerText = _document.CreateTextNode(book.Yers.ToString());
             yersElem.AppendChild(yersInnerText);
             bookElem.AppendChild(yersElem);
@@ -43,7 +43,7 @@ namespace Task_1.Share
             {
                 if (xNode.Attributes.Count > 0)
                 {
-                    var attributeName = xNode.Attributes.GetNamedItem("name");
+                    var attributeName = xNode.Attributes.GetNamedItem("Name");
                     try
                     {
                         var attributeNameText = attributeName?.InnerText;
@@ -94,18 +94,18 @@ namespace Task_1.Share
             var book = new Book();
             if (node.Attributes.Count > 0)
             {
-                var attributeName = node.Attributes.GetNamedItem("name");
+                var attributeName = node.Attributes.GetNamedItem("Name");
                 book.Name = attributeName?.Value;
             }
             foreach (XmlNode childNode in node.ChildNodes)
             {
                 try
                 {
-                    if (childNode.Name.Equals("author"))
+                    if (childNode.Name.Equals("Author"))
                     {
                         book.Author = childNode.InnerText;
                     }
-                    if (childNode.Name.Equals("yers"))
+                    if (childNode.Name.Equals("Year"))
                     {
                         book.Yers = int.Parse(childNode.InnerText);
                     }

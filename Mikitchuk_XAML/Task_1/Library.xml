@@ -1,0 +1,38 @@
+<Library>
+  <Book Name="The Great Gatsby">
+    <Author>F. Scott Fitzgerald</Author>
+    <Year>1925</Year>
+  </Book>
+  <Book Name="To Kill a Mockingbird">
+    <Author>Harper Lee</Author>
+    <Year>1960</Year>
+  </Book>
+  <Book Name="From New Country">
+    <Author>Andreev</Author>
+    <Year>1966</Year>
+    <Author>Kremko</Author>
+    <Author>Ivanovich</Author>
+  </Book>
+  <Book Name="Dorofeiv in line">
+    <Author>Gaga</Author>
+    <Year>1950</Year>
+  </Book>
+  <Book Name="Step">
+    <Author>Dronov</Author>
+    <Year>1999</Year>
+  </Book>
+  <Book Name="Input Program">
+    <Year>1984</Year>
+  </Book>
+  <Book Name="Diki">
+    <Year>1988</Year>
+  </Book>
+  <Book Name="Reva">
+    <Author>Robin</Author>
+    <Year>1950</Year>
+  </Book>
+  <Book Name="Rew">
+    <Author>Romb</Author>
+    <Year>1987</Year>
+  </Book>
+</Library>

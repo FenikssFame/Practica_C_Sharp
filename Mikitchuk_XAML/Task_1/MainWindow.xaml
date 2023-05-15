@@ -26,7 +26,7 @@
                 <RowDefinition Height="2*"/>
             </Grid.RowDefinitions>
             <TextBlock Text="Найти" Grid.Row="0" FontSize="14"/>
-            <TextBox x:Name="textBoxBookName" Grid.Row="1" Margin="10"/>
+            <TextBox x:Name="textBoxBookName" Grid.Row="1" Margin="10" TextChanged="textBoxBookName_TextChanged"/>
             <Button x:Name="buttonFindBookByName" Content="Найти" Grid.Row="2" FontSize="16" Grid.Column="1" Margin="10" Click="buttonFindBookByName_Click"/>
         </Grid>
         <TextBlock x:Name="textBlockXmlFileContent"
@@ -46,7 +46,7 @@ ScrollViewer.HorizontalScrollBarVisibility="Disabled"/>
             <TextBox x:Name="textBoxDeleteBookName" Margin="10" Grid.Row="1"/>
             <Button x:Name="buttonDelete" Content="Удалить" FontSize="16" Margin="10" Grid.Row="2" Click="buttonDelete_Click"/>
         </Grid>
-        <Button x:Name="buttonAdd" Content ="Добавить" Grid.Row="3" FontSize="16" Margin="10" Click="buttonAdd_Click"/>
+        <Button x:Name="buttonAdd" Content ="Добавить" Grid.Row="3" FontSize="16" Margin="10,10,10,10" Click="buttonAdd_Click"/>
         <Button x:Name="buttonExit" Content="Выход" Grid.Row="3" Grid.Column="1" FontSize="16" Margin="10" Click="buttonExit_Click"/>
     </Grid>
 </Window>
