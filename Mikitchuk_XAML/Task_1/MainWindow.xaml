@@ -14,12 +14,13 @@
             <RowDefinition Height="1.5*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="5*"/>
-            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="571*"/>
+            <ColumnDefinition Width="141*"/>
+            <ColumnDefinition Width="88*"/>
         </Grid.ColumnDefinitions>
-        <TextBlock x:Name="textBlockXMLPathFile" Grid.Row="0" Margin="10"/>
-        <Button x:Name="buttonOpenFile" Content="Открыть" Grid.Column ="1" FontSize ="16" Margin="10" Click="buttonOpenFile_Click"/>
-        <Grid Grid.Row="1" Grid.Column="1" Margin="10">
+        <TextBlock x:Name="textBlockXMLPathFile" Grid.Row="0" Margin="10,10,10,10"/>
+        <Button x:Name="buttonOpenFile" Content="Открыть" Grid.Column ="1" FontSize ="16" Margin="10,10,10,10" Click="buttonOpenFile_Click" Grid.ColumnSpan="2"/>
+        <Grid Grid.Row="1" Grid.Column="1" Margin="10,10,10,10" Grid.ColumnSpan="2">
             <Grid.RowDefinitions>
                 <RowDefinition Height="0.5*"/>
                 <RowDefinition Height="2*"/>
@@ -32,11 +33,11 @@
         <TextBlock x:Name="textBlockXmlFileContent"
 Grid.Row="1"
 Grid.RowSpan="2"
-Margin="5"
+Margin="5,5,5,5"
 ScrollViewer.VerticalScrollBarVisibility="Auto"
 ScrollViewer.CanContentScroll="True"
 ScrollViewer.HorizontalScrollBarVisibility="Disabled"/>
-        <Grid Grid.Row="2" Grid.Column="1" Margin="10">
+        <Grid Grid.Row="2" Grid.Column="1" Margin="10,10,10,10" Grid.ColumnSpan="2">
             <Grid.RowDefinitions>
                 <RowDefinition Height="0.5*"/>
                 <RowDefinition Height="2*"/>
@@ -47,6 +48,6 @@ ScrollViewer.HorizontalScrollBarVisibility="Disabled"/>
             <Button x:Name="buttonDelete" Content="Удалить" FontSize="16" Margin="10" Grid.Row="2" Click="buttonDelete_Click"/>
         </Grid>
         <Button x:Name="buttonAdd" Content ="Добавить" Grid.Row="3" FontSize="16" Margin="10,10,10,10" Click="buttonAdd_Click"/>
-        <Button x:Name="buttonExit" Content="Выход" Grid.Row="3" Grid.Column="1" FontSize="16" Margin="10" Click="buttonExit_Click"/>
+        <Button x:Name="buttonExit" Content="Выход" Grid.Row="3" Grid.Column="1" FontSize="16" Margin="10,10,10,10" Click="buttonExit_Click" Grid.ColumnSpan="2"/>
     </Grid>
 </Window>

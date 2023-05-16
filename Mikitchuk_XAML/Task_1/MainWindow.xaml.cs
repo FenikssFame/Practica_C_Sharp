@@ -39,8 +39,9 @@ namespace Task_1
         {
 
             AddNewBook addNewBook = new AddNewBook();
-            addNewBook.XmlFilePath = _xmlFilePath;
+            addNewBook.XmlFilePath = textBlockXMLPathFile.Text;
             addNewBook.Show();
+            _worker.Load(_xmlFilePath);
             PrintBooks(_worker.GetAll());
         }
         private void buttonExit_Click(object sender, RoutedEventArgs e)

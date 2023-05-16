@@ -27,36 +27,4 @@
   <Book Name="Diki">
     <Year>1988</Year>
   </Book>
-  <Book Name="Reva">
-    <Author>Robin</Author>
-    <Year>1950</Year>
-  </Book>
-  <Book Name="Rew">
-    <Author>Romb</Author>
-    <Year>1987</Year>
-  </Book>
-  <Book Name="tron">
-    <Author>rob</Author>
-    <Year>1999</Year>
-  </Book>
-  <Book Name="rew">
-    <Author>etyr</Author>
-    <Year>2355</Year>
-  </Book>
-  <Book Name="g">
-    <Author>reg</Author>
-    <Year>1298</Year>
-  </Book>
-  <Book Name="rwet">
-    <Author>reywreryewy</Author>
-    <Year>23154</Year>
-  </Book>
-  <Book Name="ershdfkul">
-    <Author>dfghjkl;</Author>
-    <Year>'56789</Year>
-  </Book>
-  <Book Name="eglr">
-    <Author>egor</Author>
-    <Year>34567</Year>
-  </Book>
 </Library>
